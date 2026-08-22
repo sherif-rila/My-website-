@@ -42,7 +42,7 @@
             border: 2px solid rgba(255, 182, 193, 0.6);
             color: #333;
             position: relative;
-            z-index: 1;
+            z-index: 10;
         }
 
         header {
@@ -51,11 +51,10 @@
             animation: gradientShift 6s ease infinite;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 35px 20px;
             position: relative;
             cursor: pointer;
             user-select: none;
-            overflow: hidden;
         }
 
         @keyframes gradientShift {
@@ -69,12 +68,6 @@
             font-size: 60px;
             margin-bottom: 5px;
             text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 2px 2px 8px rgba(0,0,0,0.4);
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-
-        header:active h1 {
-            transform: scale(0.95);
         }
 
         header p.subtitle {
@@ -111,26 +104,34 @@
             opacity: 0.8;
         }
 
-        /* Instagram Button Styling */
-        .insta-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            border-radius: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            transition: all 0.3s ease;
+        /* Fixed Instagram Section */
+        .insta-container {
+            text-align: center;
+            padding: 15px;
+            background: #fff;
+            border-bottom: 2px solid #f0f0f0;
             position: relative;
-            z-index: 2;
+            z-index: 999;
         }
 
-        .insta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        .insta-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white !important;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .insta-btn:active {
+            transform: scale(0.96);
         }
 
         .nav-tabs {
@@ -150,10 +151,6 @@
             background: transparent;
             font-size: 15px;
             transition: all 0.3s ease;
-        }
-
-        .tab-btn:hover {
-            background: #ffe0f0;
         }
 
         .tab-btn.active {
@@ -183,7 +180,6 @@
             padding: 22px;
             margin-bottom: 22px;
             border-radius: 0 14px 14px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
 
         .story-card h2 {
@@ -207,7 +203,6 @@
             margin: 22px 0;
             font-style: italic;
             font-size: 17px;
-            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.3);
         }
 
         footer {
@@ -234,11 +229,14 @@
         <p class="subtitle">A Magical Journey of Love</p>
         <div class="heart-badge">Rila 💗 Sherif</div>
         <p class="touch-hint">✨ Touch here for magic! ✨</p>
-        <br>
-        <a href="https://www.instagram.com/sh.xrif?igsi=cjNvYnIzZjBmcjcz" target="_blank" class="insta-btn" onclick="event.stopPropagation();">
+    </header>
+
+    <!-- Separate Clickable Insta Section -->
+    <div class="insta-container">
+        <a href="https://www.instagram.com/sh.xrif?igsi=cjNvYnIzZjBmcjcz" target="_blank" class="insta-btn">
             📸 Follow @sh.xrif on Instagram
         </a>
-    </header>
+    </div>
 
     <div class="nav-tabs">
         <button class="tab-btn active" onclick="openTab(event, 'story')">📖 How It Began</button>
