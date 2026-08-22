@@ -21,7 +21,6 @@
             position: relative;
         }
 
-        /* Canvas for starry background & click effects */
         #starCanvas {
             position: fixed;
             top: 0;
@@ -110,6 +109,28 @@
             color: #ffe0f0;
             font-style: italic;
             opacity: 0.8;
+        }
+
+        /* Instagram Button Styling */
+        .insta-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .insta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
 
         .nav-tabs {
@@ -213,6 +234,10 @@
         <p class="subtitle">A Magical Journey of Love</p>
         <div class="heart-badge">Rila 💗 Sherif</div>
         <p class="touch-hint">✨ Touch here for magic! ✨</p>
+        <br>
+        <a href="https://www.instagram.com/sh.xrif?igsi=cjNvYnIzZjBmcjcz" target="_blank" class="insta-btn" onclick="event.stopPropagation();">
+            📸 Follow @sh.xrif on Instagram
+        </a>
     </header>
 
     <div class="nav-tabs">
@@ -428,4 +453,4 @@
 </script>
 
 </body>
-    </html>
+</html>
