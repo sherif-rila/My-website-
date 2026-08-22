@@ -104,9 +104,12 @@
             opacity: 0.8;
         }
 
-        /* Fixed Instagram Section */
+        /* Instagram Dual Buttons Section */
         .insta-container {
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
             padding: 15px;
             background: #fff;
             border-bottom: 2px solid #f0f0f0;
@@ -116,14 +119,14 @@
 
         .insta-btn {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 10px 22px;
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
             color: white !important;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.3);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             z-index: 1000;
@@ -231,10 +234,13 @@
         <p class="touch-hint">✨ Touch here for magic! ✨</p>
     </header>
 
-    <!-- Separate Clickable Insta Section -->
+    <!-- Two Clickable Insta Buttons -->
     <div class="insta-container">
         <a href="https://www.instagram.com/sh.xrif?igsi=cjNvYnIzZjBmcjcz" target="_blank" class="insta-btn">
-            📸 Follow @sh.xrif on Instagram
+            📸 @sh.xrif
+        </a>
+        <a href="https://www.instagram.com/yk.m0i?igsi=eDM0d3FtbHVldzhu" target="_blank" class="insta-btn">
+            📸 @yk.m0i
         </a>
     </div>
 
